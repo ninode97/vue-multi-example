@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./libraries//vue-global.min.js"></script>
+    <link rel="stylesheet" href="../theme-plugin/dist/style.css">
+    <script src="../theme-plugin/dist/theme-plugin.umd.cjs"></script>
+    <script src="../menu-plugin/dist//menu-plugin.umd.cjs"></script>
+    <!-- <script src="../theme-plugin/dist/theme-plugin.js"></script>
+    <script src="../menu-plugin/dist/menu-plugin.js"></script> -->
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const app = Vue.createApp({
+          setup() {
+            return {};
+          },
+          template: `<ThemePlugin/>`,
+        });
+        window.useMenuPlugin(app);
+        window.useThemePlugin(app);
+        app.mount("#app");
+      });
+    </script>
+  </body>
+</html>
